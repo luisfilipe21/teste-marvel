@@ -7,11 +7,11 @@ Este é um teste de Front-end em React e Styled Components que apresenta uma pá
 
 ## Pré-requisitos
 
--[ReactJs]
--[Typescript]
--[Styles Components]
--[Responsividade]
--[Componentização estruturada]
+-ReactJs
+-Typescript
+-Styles Components
+-Responsividade
+-Componentização estruturada
 
 ## Instalação
 
