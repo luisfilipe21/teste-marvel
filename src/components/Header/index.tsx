@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { StyledDivA, StyledDivB, StyledDivC, StyledDivContainer, StyledHeader } from "../../styles/header"
 
+import img from "../../../public/resources/avatar.png";
 export const Header = () => {
 
     return (
@@ -19,7 +20,7 @@ export const Header = () => {
                 </StyledDivB>
                 
                 <StyledDivC >
-                    <img src="public/resources/avatar.png" alt="User Photo" title="User Photo" />
+                    <img src={img} alt="User Photo" title="User Photo" />
                     <p>Sair</p>
                 </StyledDivC>
             </StyledDivContainer>
