@@ -1,8 +1,15 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { StyledDivA, StyledDivB, StyledDivC, StyledDivContainer, StyledHeader } from "../../styles/header"
 
 import img from "../../../public/resources/avatar.png";
+
 export const Header = () => {
+    const navigate = useNavigate();
+    
+    const logout = () => {
+        navigate("/login");
+        localStorage.removeItem("@MARVEL");
+    }
 
     return (
         <StyledHeader>
@@ -21,7 +28,7 @@ export const Header = () => {
                 
                 <StyledDivC >
                     <img src={img} alt="User Photo" title="User Photo" />
-                    <p>Sair</p>
+                    <p onClick={() => logout()}>Sair</p>
                 </StyledDivC>
             </StyledDivContainer>
         </StyledHeader>

@@ -225,3 +225,43 @@ export const DivDisney = styled.div<{ $disney?: string; }>`
         height: 200px;
     }
 `
+
+export const MainSectionForm = styled.section`
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+`
+export const MainDivFormImg = styled.div<{ $image?: string; }>`
+    height: 100%;
+    width: 100%;
+    background-image:url(${props => props.$image || null});
+`
+
+export const MainDivForm = styled.div`
+    height: 100%;
+    max-width: 567px; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: black;
+    
+
+    form{
+        display: flex;
+        flex-direction:column;
+        gap: 1rem;
+        padding: 2rem;
+        border: 3px solid red;
+        border-radius:20px;
+        color: white;
+
+        div{
+            display: flex;
+            flex-direction:column;
+            gap: 1rem;
+        }
+    }
+`
