@@ -6,6 +6,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { FormLoginSchema } from "./FormLoginSchema";
 import { z } from "zod";
 import { Footer } from "../../Footer";
+import bg from "../../../../public/renditions/image-1366-768.png"
+import { MainDivAvisos, MainDivForm, MainDivFormImg, MainSectionForm } from "../../../styles/body";
+
 
 export const FormLogin = () => {
 
@@ -39,24 +42,33 @@ export const FormLogin = () => {
 
     return (
         <>
-            <div>
-                <form onSubmit={handleSubmit(login)}>
+            <MainSectionForm>
+                <MainDivForm>
+
                     <div>
-                        <FromInput type="text"
-                            {...register("email")}
-                            placeholder="Email"
-                        />
-                        <FromInput id="password"
-                            type="password"
-                            {...register("password")}
-                            placeholder="Senha"
-                        />
+                        <form onSubmit={handleSubmit(login)}>
+                            <div>
+                                <FromInput type="text"
+                                    {...register("email")}
+                                    placeholder="Email"
+                                />
+                                <FromInput id="password"
+                                    type="password"
+                                    {...register("password")}
+                                    placeholder="Senha"
+                                />
+                            </div>
+                            <button type="submit">Entrar</button>
+                        </form>
+                        
+                        <MainDivAvisos>
+                            <p>Caso ainda não seja cadastrado</p>
+                            <button><Link to="/">Cadastre-se</Link></button>
+                        </MainDivAvisos>
                     </div>
-                    <button type="submit">Entrar</button>
-                </form>
-                <p>Caso ainda não seja cadastrado</p>
-                <button><Link to="/">Cadastre-se</Link></button>
-            </div>
+                </MainDivForm>
+                <MainDivFormImg $image={bg} />
+            </MainSectionForm>
             <Footer />
         </>
     )

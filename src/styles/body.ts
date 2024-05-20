@@ -231,23 +231,26 @@ export const MainSectionForm = styled.section`
     height: 100vh;
     position: relative;
     display: flex;
+    background-color: black;
 `
 export const MainDivFormImg = styled.div<{ $image?: string; }>`
     height: 100%;
     width: 100%;
     background-image:url(${props => props.$image || null});
+    background-repeat: repeat;
+    background-size: 400px;
+    z-index: 1;
 `
 
 export const MainDivForm = styled.div`
     height: 100%;
-    max-width: 567px; 
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    background-color: black;
-    
+    position: absolute;
+    z-index: 2;
 
     form{
         display: flex;
@@ -257,11 +260,74 @@ export const MainDivForm = styled.div`
         border: 3px solid red;
         border-radius:20px;
         color: white;
+        font-weight: 700;
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
 
         div{
             display: flex;
             flex-direction:column;
             gap: 1rem;
+        }
+
+        button{
+            padding: 0.5rem;
+            background-color: transparent;
+            border: 2px solid transparent;
+            color: white;
+            font-weight:700;
+            border-radius: 1rem;
+
+            &:hover{
+                border: 2px solid black;
+                cursor: pointer;
+                border-radius: 1rem;
+                color:red;
+                font-weight:900;
+            }
+        }
+    }
+`
+
+export const MainInputDiv = styled.div`
+    
+    label{
+        font-family: "Marvel", sans-serif;
+    }
+    input{
+        padding: 0.5rem ;
+    }
+`
+export const MainDivAvisos = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+    p{
+        color: white;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    button{
+        padding: 1rem;
+        border: 2px solid transparent;
+        border-radius: 1rem;
+        background-color: transparent;
+        box-shadow: 0px 0px 20px 1px rgba(255,255,255,1);
+        a{
+            color: white;
+            text-decoration: none;
+            font-weight:700;
+
+            &:hover{
+                /* padding: 1rem; */
+                cursor: pointer;
+                color:red;
+                font-weight:900;
+            }
         }
     }
 `

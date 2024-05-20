@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { FromInput } from "../../Input"
 import { db } from "../../../database"
 import { Footer } from "../../Footer"
-import { MainDivForm, MainDivFormImg, MainSectionForm } from "../../../styles/body"
+import { MainDivAvisos, MainDivForm, MainDivFormImg, MainSectionForm } from "../../../styles/body"
 import bg from "../../../../public/renditions/image-1366-768.png"
 
 export const RegisterForm = () => {
@@ -67,8 +67,11 @@ export const RegisterForm = () => {
                             Cadastrar
                         </button>
                     </form>
-                    <p>Caso já seja cadastrado, faça seu login:</p>
-                    <button><Link to="/">Logar</Link></button>
+                    
+                    <MainDivAvisos>
+                        <p>Caso já seja cadastrado, faça seu login:</p>
+                        <button><Link to="/login">Logar</Link></button>
+                    </MainDivAvisos>
                 </MainDivForm>
                 <MainDivFormImg $image={bg} />
             </MainSectionForm>
