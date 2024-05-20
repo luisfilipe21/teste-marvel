@@ -276,12 +276,12 @@ export const MainDivForm = styled.div`
             color: white;
             font-weight:700;
             border-radius: 1rem;
+            box-shadow: inset 0px 0px 10px 10px rgba(38,33,38,0.75);
 
             &:hover{
                 border: 2px solid black;
                 cursor: pointer;
                 border-radius: 1rem;
-                color:red;
                 font-weight:900;
             }
         }
@@ -312,7 +312,7 @@ export const MainDivAvisos = styled.div`
     }
     
     button{
-        padding: 1rem;
+        padding: 1rem 2rem;
         border: 2px solid transparent;
         border-radius: 1rem;
         background-color: transparent;
@@ -323,7 +323,6 @@ export const MainDivAvisos = styled.div`
             font-weight:700;
 
             &:hover{
-                /* padding: 1rem; */
                 cursor: pointer;
                 color:red;
                 font-weight:900;

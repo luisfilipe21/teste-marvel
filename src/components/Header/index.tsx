@@ -15,12 +15,12 @@ export const Header = () => {
         <StyledHeader>
             <StyledDivContainer >
                 <StyledDivA>
-                    <h2><a href="">MARVEL</a></h2>
+                    <h2><Link to="/personagens">MARVEL</Link></h2>
                 </StyledDivA>
 
                 <StyledDivB>
                     <ul>
-                        <li><Link to="/">Personagens</Link></li>
+                        <li><Link to="/personagens">Personagens</Link></li>
                         <li><Link to="/filmes">Filmes</Link></li>
                         <li><Link to="/hqs">HQs</Link></li>
                     </ul>
